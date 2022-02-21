@@ -18,7 +18,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.get('/', (req, res) => {
     res.render('home')
 })
-app.get('/addCrabSpot', async (req, res) => {
+app.get('/addcrabspot', async (req, res) => {
     const newSpot = new CrabSpot({ title: 'Best spot ever', location: 'Mandurah' })
     await newSpot.save();
     res.send(newSpot);
